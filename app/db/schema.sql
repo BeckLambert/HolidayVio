@@ -1,12 +1,17 @@
 DROP DATABASE IF EXISTS holiday_db;
-
-CREATE holiday_db;
+CREATE DATABASE holiday_db;
 
 USE holiday_db;
 
-CREATE TABLE holiday (
-    id not null AUTO_INCREMENT PRIMARY KEY,
-    questions VARCHAR (300) NOT NULL,
-    answers BOOLEAN(100) default false
-    date TIMESTAMP not null DEFAULT current_timestamp,
+CREATE TABLE quiz (
+	id INT(10) NOT NULL  AUTO_INCREMENT PRIMARY KEY,
+    question VARCHAR(244) NOT NULL,
+    choice1 VARCHAR(244) NOT NULL,
+    choice2 VARCHAR(244) NOT NULL,
+    choice3 VARCHAR(244) NOT NULL,
+    choice4 VARCHAR(244) NOT NULL,
+    userAns text
 );
+
+SELECT * FROM quiz;
+
