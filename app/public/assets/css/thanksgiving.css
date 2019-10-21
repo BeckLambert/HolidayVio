@@ -1,0 +1,34 @@
+#countdown {
+    text-align: center;
+    color: #751A33;
+    font-size: 30px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    background: linear-gradient(to bottom right, #B34233, #D28F33, #D4B95E);
+    border: 7px outset #1A8693;
+    white-space: nowrap;
+    padding: 15px;
+    margin-top: 50px;
+    margin-left: 175px;
+    margin-right: 175px;
+}
+
+body {
+    background-image: url("https://img3.goodfon.com/wallpaper/nbig/0/33/wood-autumn-leaves-pattern.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 350px;
+}
+
+#emailForm {
+    text-align: center;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    color: #751A33;
+    font-size: 30px;
+    border: 7px outset #1A8693;
+    background: linear-gradient(to bottom left, #B34233, #D28F33, #D4B95E);
+    padding: 15px;
+    margin-top: 40px;
+    margin-left: 175px;
+    margin-right: 175px;
+}
