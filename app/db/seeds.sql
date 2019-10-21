@@ -1,10 +1,10 @@
-INSERT INTO holiday (questions, answers);
-VALUES ("Chocolate can be everyone's most favorite Halloween candy. Is it yours?", false);
+INSERT INTO quiz (question, choice1, choice2, choice3, choice4);
+VALUES (`If you could only eat one candy for Halloween, what would it be?`, `Snickers`, `Kit Kat`, `Reeses`, `Gummy Worms`);
 
-INSERT INTO holiday (questions, answers);
-VALUES ("Are you getting dressed up for Halloween?", true);
+INSERT INTO quiz (question, choice1, choice2, choice3, choice4);
+VALUES (`If you could pick one animal to escort you into the underworld, who would you choose?`, `Barry the Bat`, `Shakira the Snake`, `Waldo the Wolf`, `Beatrice the Black Cat`);
 
-INSERT INTO holiday (questions, answers);
-VALUES ("Beaware of the opened packages of candy on Halloween. Are you safe?", false);
+INSERT INTO quiz (question, choice1, choice2, choice3, choice4);
+VALUES (`What is your favorite Halloween-y color?`, `Orange`, `Purple`, `Black`, `Slime Green`);
 
-SELECT * FROM holiday
+SELECT * FROM quiz;
