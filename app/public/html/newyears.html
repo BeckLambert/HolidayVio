@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://peter.build/newyears/js/flipclock.js"></script>
+    <script src="http://peter.build/newyears/js/newyear.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/newyearscss.css">
+    <title>New Years Day</title>
+</head>
+
+<body>
+
+    <h1 class="title">Confetti</h1>
+    <canvas id="canvas"></canvas>
+    <div class="holiday-body">
+        <div class="wrapper">
+            <nav class="tabs">
+                <div class="selector">
+                    <a data-href="" href="#">Home |</a>
+                    <a data-href="" href="#">Holidays |</a>
+                    <a data-href="" href="#">Quiz</a>
+                </div>
+            </nav>
+        </div>>
+
+        <div class="card col-md-6 text-center">
+            <table class="table table-sm table-hover" id="holiday-events">
+                <thead>
+                    <tr>
+                        <th scope="col">NEXT UPCOMING HOLIDAY IS: HALLOWEEN!</th>
+
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <h1 class="title">New Years Day!</h1>
+        </div>
+        <div class="row">
+            <h3 class="sub"> Let's see how many days are left until:</h3>
+        </div>
+    </div>
+    <p id="demo"></p>
+    <script>
+        var deadline = new Date("Dec 31, 2019 23:59:59").getTime();
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var t = deadline - now;
+            var days = Math.floor(t / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((t % (1000 * 60)) / 1000);
+            document.getElementById("demo").innerHTML = days + "D "  
+                + hours + "H " + minutes + "M " + seconds + "S ";
+            if (t < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "HAPPY NEW YEARS!";
+            }
+        }, 1000); 
+    </script>
+    </div>
+    <!-- <div id="content">Only one div needed</div> -->
+
+    <div class="container">
+        <div class="content">Get ready for the big day!</div>
+    </div>
+    <script type="text/javascript" src="../../models/newyears.js"></script>
+</body>
+
+</html>

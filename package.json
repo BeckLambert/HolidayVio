@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "googleapis": "^39.2.0",
     "lint": "^0.7.0"
   },
   "devDependencies": {
