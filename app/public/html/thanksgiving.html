@@ -4,91 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <style>
-        #countdown {
-            text-align: center;
-            color: #751A33;
-            font-size: 30px;
-            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-            background: linear-gradient(to bottom right, #B34233, #D28F33, #D4B95E);
-            border: 7px outset #1A8693;
-            white-space: nowrap;
-            padding: 15px;
-            margin-top: 50px;
-            margin-left: 175px;
-            margin-right: 175px;
-        }
-        body {
-            background-image: url("https://img3.goodfon.com/wallpaper/nbig/0/33/wood-autumn-leaves-pattern.jpg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../assets/css/thanksgiving.css">
     <title>Thanksgiving</title>
-</head>
 
+</head>
 
 <body>
 
-        <div id=countdown>
+<div id=countdown></div>
 
-            <script>
+    <div id=emailForm>
 
-                var countDownDate = new Date("Nov 28, 2019 15:37:25").getTime();
+    <form action="https://formspree.io/xwkekelj" method="POST" enctype="multipart/form-data">
 
-                var x = setInterval(function() {
-
-                var now = new Date().getTime();
-
-                var distance = countDownDate - now;
-
-                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                
-                document.getElementById("countdown").innerHTML = "Countdown to Thanksgiving: " + "<br>" + days + " days " + hours + " hours " + minutes + " minuets " + seconds + " seconds ";
-                
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "EXPIRED";
-                }
-                }, 1000);
-
-            </script>
-
-        </div>
-
-        <div id=emailForm style=
-        "text-align: center;
-        font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-        color: #751A33;
-        font-size: 30px;
-        border: 7px outset #1A8693;
-        background: linear-gradient(to bottom left, #B34233, #D28F33, #D4B95E);
-        padding: 15px;
-        margin-top: 40px;
-        margin-left: 175px;
-        margin-right: 175px;">
-
-            <form action="https://formspree.io/xwkekelj" method="POST" enctype="multipart/form-data">
-
-                <label>
-                    Want to be notified when our Thanksgiving page becomes unlocked? Sign up:
-                        <input type="text" name="_replyto">
-                </label>
+    <label>
+        Want to be notified when our Thanksgiving page becomes unlocked? Sign up:
+        <input type="text" name="_replyto">
+    </label>
 
                 <!-- <label>
                     Your file:
                         <input type="file" name="upload">
                 </label> -->
 
-                <button type="submit">Send</button>
+        <button type="submit">Send</button>
 
-            </form>
+    </form>
 
-        </div>
+</div>
+
+<script type="text/javascript" src="../assets/js/thanksgiving.js"></script>
 
 </body>
 
