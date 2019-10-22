@@ -7,34 +7,55 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="http://peter.build/newyears/js/flipclock.js"></script>
-    <script src="http://peter.build/newyears/js/newyear.js"></script>
+    <!-- <script src="http://peter.build/newyears/js/newyear.js"></script> -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
-    <link rel="stylesheet" type="text/css" href="../assets/css/valentines.scss">
+    <link rel="stylesheet" type="text/css" href="../assets/css/valentines.css">
+    <link href="https://fonts.googleapis.com/css?family=Mirza&display=swap" rel="stylesheet">
     <title>Valentine's Day</title>
 </head>
 
-<body>
-    <div class="heart"></div>
-    <div class="page page-thunder-to-text">
-        <input id="input" type="text" maxlength="24" placeholder="I love you!">
-        <canvas id="canvas"></canvas>
-    </div>
-    <div class="container">
-        <h1 id="head">Happy Valentine's Day!</h1>
-        <p>
-            <li><span id="days"></span>days |</li>
-            <li><span id="hours"></span>Hours |</li>
-            <li><span id="minutes"></span>Minutes |</li>
-            <li><span id="seconds"></span>Seconds</li>
-        </p>
+<body id="vday">
+
+    <h1 class="title">Happy Valentine's Day</h1>
+    <h1>You're the HTML to my CSS</h1>
+    <div class="heart">
+        <span class="face"></span>
     </div>
 
-    <script type="text/javascript" src="../../models/valentines.js"></script>
+    <p id="demo"></p>
+    <script>
+        var deadline = new Date("Feb 13, 2020 23:59:59").getTime();
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var t = deadline - now;
+            var days = Math.floor(t / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((t % (1000 * 60)) / 1000);
+            document.getElementById("demo").innerHTML = days + "Days "
+                + hours + "Hours " + minutes + "Mins " + seconds + "S ";
+            if (t < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "HAPPY VALENTINE'S DAY!";
+            }
+        }, 1000); 
+    </script>
+    </div>
+    <h4>Days Left Until Valentine's Day!!</h4>
+    <canvas></canvas>
+</body>
+
+</html>
+
+<!-- <div class="page page-thunder-to-text">
+        <input id="input" type="text" maxlength="24" placeholder="I love you!">
+        <canvas id="canvas"></canvas>
+    </div> -->
+
+<script type="text/javascript" src="../../models/valentines.js"></script>
 </body>
 
 </html>
