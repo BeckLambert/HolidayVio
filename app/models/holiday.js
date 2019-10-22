@@ -1,6 +1,6 @@
 var orm = require("../config/orm.js")
 
-var halloween = {
+var holiday = {
 
     selectAll: function (cb) {
         orm.selectAll("halloween", function(res) {
@@ -9,10 +9,16 @@ var halloween = {
     },
 
     create: function (cols, vals, cb) {
-        orm.create("halloween", cold, vals, function (res) {
+        orm.create("halloween", cols, vals, function (res) {
             cb(res);
         });
     }, 
 
-    update: function (objColVals, )
-}
+    update: function (objColVals, condition, cb) {
+        orm.update("halloween", objColVals, condition, function (res) {
+            cb(res)
+        });
+    },
+};
+
+module.exports = holiday;
