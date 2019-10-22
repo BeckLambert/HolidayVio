@@ -14,6 +14,7 @@ var holiday = {
         });
     }, 
 
+
     update: function (objColVals, condition, cb) {
         orm.update("halloween", objColVals, condition, function (res) {
             cb(res)
@@ -22,3 +23,7 @@ var holiday = {
 };
 
 module.exports = holiday;
+=======
+    // update: function (objColVals);
+}
+

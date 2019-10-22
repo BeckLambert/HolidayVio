@@ -2,6 +2,7 @@ var express = require("express");
 
 var holiday = require("../models/holiday.js");
 
+
 var router = express.Router();
 
 // router.get("/", function (req, res) {
@@ -24,12 +25,29 @@ router.get("/", function (req, res) {
         res.render("home", hbsObject);
     });
 });
-//Add a burger to the menu
+
 router.post("/api/halloween", function (req, res) {
+
     holiday.create(
         ["questions", "choice1", "choice2", "choice3", "choice4", "userAns"],
         [req.body.questions, req.body.choice1, req.body.choice2, req.body.choice3, req.body.choice4, req.body.userAns], function (result) {
             res.json({ id: result.insertId });
+
+
+
+    router.put("/api/burgers/:id", function (req, res) {
+        var condition = "id = " + req.params.id;
+        console.log("condition", condition);
+
+        burgers.updateOne({
+            devoured: req.body.devoured
+        }, condition, function (result) {
+            if (result.changedRows === 0) {
+                return res.status(404).end();
+            } else {
+                res.status(200).end();
+            }
+
         });
 });
 
