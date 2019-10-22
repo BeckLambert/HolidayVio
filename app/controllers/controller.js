@@ -1,6 +1,6 @@
 var express = require("express");
 
-var holidays = require("..models/holiday.js";
+var holidays = require("..models/holiday.js");
 
 var router = express.Router();
 
@@ -26,13 +26,13 @@ router.get("/", function (req, res) {
         res.render("home", hbsObject);
     });
 });
-//Add a burger to the menu
+
 router.post("/api/halloween", function (req, res) {
-    halloween.create()
-        ["questions", "],
-        [req.body.burger_name, req.body.devoured], function (result) {
+    halloween.create(
+        ["questions"], [req.body.burger_name, req.body.devoured], function (result) {
             res.json({ id: result.inserId });
         });
+
 
     router.put("/api/burgers/:id", function (req, res) {
         var condition = "id = " + req.params.id;
@@ -66,6 +66,5 @@ router.post("/api/halloween", function (req, res) {
     });
 
 });
-    module.exports = router;
 
 module.exports = router;

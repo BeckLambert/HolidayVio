@@ -14,5 +14,5 @@ var halloween = {
         });
     }, 
 
-    update: function (objColVals, )
+    // update: function (objColVals);
 }
