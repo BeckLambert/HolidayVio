@@ -132,129 +132,112 @@
   
 //   .container {
 //     margin: 0 auto;
-//   } */ 
-
-  #vday {
-    background-repeat: no-repeat;
-    background-image: url("../images/valentinesday.png");
-    background-attachment: fixed;
-    background-position: center;
-   /* background-color: u */
-   color: whitesmoke;
-   text-align: center;
-}
+//   } */
+#vday {
+  background-repeat: no-repeat;
+  background-image: url("../images/valentinesday.png");
+  background-attachment: fixed;
+  background-position: center;
+  /* background-color: u */
+  color: whitesmoke;
+  text-align: center; }
 
 #demo {
-    font-size: 90px;
-    padding-top: 350px;
-    border: 3px whitesmoke dotted;
-    
-}
+  font-size: 90px;
+  padding-top: 350px;
+  border: 3px whitesmoke dotted; }
 
 .title {
   font-family: 'Mirza', cursive;
-  font-size: 90px;
-}
-
-$master-size:20vmax;
-$pink:#ee565a;
-$grey:#ddd;
-$black:#222;
-$white:#fff;
-$darkpink:#e04e50;
+  font-size: 90px; }
 
 * {
-  box-sizing:border-box;
-  position:relative;
-}
+  box-sizing: border-box;
+  position: relative; }
+
 html {
-  font-size:100%;
-}
+  font-size: 100%; }
+
 body {
-  background:#eee;
-  font-size:10px;
-}
+  background: #eee;
+  font-size: 10px; }
 
 .heart {
-  animation:1s pulse infinite;
-  margin:auto;
+  animation: 1s pulse infinite;
+  margin: auto;
   position: relative;
-  width:$master-size*2;
-}
+  width: 40vmax; }
+
 .heart:before,
 .heart:after {
-  background: $pink;
-  border-radius: $master-size $master-size $master-size*.2 $master-size*.2;
+  background: #ee565a;
+  border-radius: 20vmax 20vmax 4vmax 4vmax;
   content: "";
-  left:$master-size;
-  height:$master-size*1.6;
+  left: 20vmax;
+  height: 32vmax;
   position: absolute;
   transform: rotate(-45deg);
   transform-origin: 0 100%;
-  width:$master-size;
-}
+  width: 20vmax; }
+
 .heart:after {
   left: 0;
   transform: rotate(45deg);
-  transform-origin :100% 100%;
-}
+  transform-origin: 100% 100%; }
 
 .face {
-  background:$black;
-  border-radius:0 0 $master-size*.5 $master-size*.5;
-  border-top:$master-size*.1 solid $white;
-  display:block;
-  height:$master-size*.3;
-  left:$master-size*.7;
-  position:absolute;
-  top:$master-size*.8;
-  width:$master-size*.6;
-  z-index:5;
-}
-.face:before,.face:after {
-  background:$black;
-  border-radius:$master-size*.2;
-  box-shadow:
-    0 $master-size*.2 0 -.9vmax $darkpink;
-  content:'';
-  display:block;
-  height:$master-size*.2;
-  position:absolute;
-  bottom:$master-size*.4;
-  width:$master-size*.2;
-  z-index:5;
-}
+  background: #222;
+  border-radius: 0 0 10vmax 10vmax;
+  border-top: 2vmax solid #fff;
+  display: block;
+  height: 6vmax;
+  left: 14vmax;
+  position: absolute;
+  top: 16vmax;
+  width: 12vmax;
+  z-index: 5; }
+
+.face:before, .face:after {
+  background: #222;
+  border-radius: 4vmax;
+  box-shadow: 0 4vmax 0 -0.9vmax #e04e50;
+  content: '';
+  display: block;
+  height: 4vmax;
+  position: absolute;
+  bottom: 8vmax;
+  width: 4vmax;
+  z-index: 5; }
+
 .face:before {
-  left:-$master-size*.2;
-}
+  left: -4vmax; }
+
 .face:after {
-  right:-$master-size*.2;
-}
+  right: -4vmax; }
 
 h1 {
-  background:$white;
-  border:1px solid $grey;
-  border-radius:$master-size;
-  font:700 $master-size*.25/1 "Amatic SC";
-  margin:$master-size*.5 auto $master-size*.2;
-  padding:1vw;
-  text-align:center;
-  width:$master-size*2.5;
-  z-index:5;
-}
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 20vmax;
+  font: 700 5vmax "Amatic SC";
+  margin: 10vmax auto 4vmax;
+  padding: 1vw;
+  text-align: center;
+  width: 50vmax;
+  z-index: 5; }
+
 h1:after {
-  border:1vw solid transparent;
-  border-color:transparent $white $white transparent;
-  box-shadow:$master-size*.005 $master-size*.005 $grey;
-  content:'';
-  display:block;
-  left:$master-size*.3;
-  position:absolute;
-  transform:rotate(45deg);
-}
+  border: 1vw solid transparent;
+  border-color: transparent #fff #fff transparent;
+  box-shadow: 0.1vmax 0.1vmax #ddd;
+  content: '';
+  display: block;
+  left: 6vmax;
+  position: absolute;
+  transform: rotate(45deg); }
 
 @keyframes pulse {
   80% {
-    transform:scale(.9);
-  }
-}
+    transform: scale(0.9); } }
+
+/*# sourceMappingURL=valentines.css.map */
