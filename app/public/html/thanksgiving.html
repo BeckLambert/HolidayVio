@@ -1,39 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="../assets/css/thanksgiving.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
     <title>Thanksgiving</title>
 
 </head>
 
-<body>
+<body id="thanksgivingBody">
 
-<div id=countdown></div>
+    <div class="area"></div>
+    <nav class="main-menu">
+        <ul>
+            <li>
+                <a href="home.html">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
+                        Home
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="thanksgiving.html">
+                    <i class="fa fa-laptop fa-2x"></i>
+                    <span class="nav-text">
+                        Thanksgiving
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="christmas.html">
+                    <i class="fa fa-list fa-2x"></i>
+                    <span class="nav-text">
+                        Christmas
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="newyears.html">
+                    <i class="fa fa-folder-open fa-2x"></i>
+                    <span class="nav-text">
+                        New Years
+                    </span>
+                </a>
+
+            </li>
+            <li>
+                <a href="valentines.html">
+                    <i class="fa fa-bar-chart-o fa-2x"></i>
+                    <span class="nav-text">
+                        Valentines
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id=countdown></div>
 
     <div id=emailForm>
 
-    <form action="https://formspree.io/xwkekelj" method="POST" enctype="multipart/form-data">
+        <form action="https://formspree.io/xwkekelj" method="POST" enctype="multipart/form-data">
 
-    <label>
-        Want to be notified when our Thanksgiving page becomes unlocked? Sign up:
-        <input type="text" name="_replyto">
-    </label>
+            <label>
+                Want to be notified when our Thanksgiving page becomes unlocked? Sign up:
+                <input type="text" name="_replyto">
+            </label>
 
-                <!-- <label>
+            <!-- <label>
                     Your file:
                         <input type="file" name="upload">
                 </label> -->
 
-        <button type="submit">Send</button>
+            <button type="submit">Send</button>
 
-    </form>
+        </form>
 
-</div>
+    </div>
 
-<script type="text/javascript" src="../assets/js/thanksgiving.js"></script>
+    <script type="text/javascript" src="../assets/js/thanksgiving.js"></script>
 
 </body>
 

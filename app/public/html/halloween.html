@@ -5,15 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
+    <title>Halloween</title>
 </head>
 
-<body>
-    <button id="btnCreateEvents" class="btn btn-primary" onclick="makeApiCall();">
-        Create Events</button>
+<body id="halloweenBody">
+
+    <div class="area"></div>
+    <nav class="main-menu">
+        <ul>
+            <li>
+                <a href="home.html">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
+                        Home
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="thanksgiving.html">
+                    <i class="fa fa-laptop fa-2x"></i>
+                    <span class="nav-text">
+                        Thanksgiving
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="christmas.html">
+                    <i class="fa fa-list fa-2x"></i>
+                    <span class="nav-text">
+                        Christmas
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="newyears.html">
+                    <i class="fa fa-folder-open fa-2x"></i>
+                    <span class="nav-text">
+                        New Years
+                    </span>
+                </a>
+
+            </li>
+            <li>
+                <a href="valentines.html">
+                    <i class="fa fa-bar-chart-o fa-2x"></i>
+                    <span class="nav-text">
+                        Valentines
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- <button id="btnCreateEvents" class="btn btn-primary" onclick="makeApiCall();">
+        Create Events</button> -->
 
     <div id="divifm">
-        <iframe id="ifmCalendar" src="https://www.google.com/calendar/embed?
+        <iframe height="300" width="365" id="ifmCalendar" src="https://www.google.com/calendar/embed?
                 height=550&amp;wkst=1&amp;bgcolor=%23FFFFFF&
                 amp;src=24tn4fht2sssdssfdiqqlsedk%40group.calendar.google.com&
                 amp;color=%238C500B&amp;ctz=Asia%2FCalcutta" style="border-width: 0" width="950" height="520"
@@ -92,6 +143,14 @@
             })
         }
     </script>
+
+<div id="storelocatorwidget" style="width:100%;"><p>Loading <a href="https://www.storelocatorwidgets.com">Locator Software</a>...</p></div>
+<script type="text/javascript" src="//cdn.storelocatorwidgets.com/widget/mapbox-gl.js"></script>
+<script type="text/javascript" src="//cdn.storelocatorwidgets.com/widget/mapbox-gl-geocoder.js"></script>
+<script type="text/javascript" id="storelocatorscript" data-uid="1ba4cdedcae1ebd38506333156158499" data-platform="Mapbox" src="//cdn.storelocatorwidgets.com/widget/widget.js"></script>
+
+</div>
+
 </body>
 
 </html>

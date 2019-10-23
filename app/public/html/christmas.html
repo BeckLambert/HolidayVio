@@ -10,17 +10,62 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
     <title>Christmas</title>
-    <canvas width="100%" height="98"></canvas>
 </head>
 
 <body id="xmasBody">
 
-    <canvas></canvas>
+    <div class="area"></div>
+    <nav class="main-menu">
+        <ul>
+            <li>
+                <a href="home.html">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
+                        Home
+                    </span>
+                </a>
 
-    <h1 class="title">Santaaaaa I know HIM!!!!</h1>
+            </li>
+            <li class="has-subnav">
+                <a href="thanksgiving.html">
+                    <i class="fa fa-laptop fa-2x"></i>
+                    <span class="nav-text">
+                        Thanksgiving
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="christmas.html">
+                    <i class="fa fa-list fa-2x"></i>
+                    <span class="nav-text">
+                        Christmas
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="newyears.html">
+                    <i class="fa fa-folder-open fa-2x"></i>
+                    <span class="nav-text">
+                        New Years
+                    </span>
+                </a>
+
+            </li>
+            <li>
+                <a href="valentines.html">
+                    <i class="fa fa-bar-chart-o fa-2x"></i>
+                    <span class="nav-text">
+                        Valentines
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
 
     <p id="demo"></p>
-   
     <script>
         var deadline = new Date("Dec 25, 2019 23:59:59").getTime();
         var x = setInterval(function () {
@@ -40,7 +85,7 @@
     </script>
     </div>
 
-    <h4>days left until Christmas</h4>
+    <h4 class="daysTill">days left until Christmas</h4>
 
     <script type="text/javascript" src="../../models/christmas.js"></script>
 </body>
