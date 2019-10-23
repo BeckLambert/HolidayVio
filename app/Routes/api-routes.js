@@ -6,7 +6,14 @@ var Holiday = require("../models/finalQuiz.js");
 module.exports = function (app) {
 
     // Get all chirps
-    app.get("/api/all", function (req, res) {
+    app.get("/api/quiz", function (req, res) {
+        app.get("/api/todos", function(req, res) {
+            // findAll returns all entries for a table when used with no options
+            db.Holiday.findAll({}).then(function(dbTodo) {
+              // We have access to the todos as an argument inside of the callback function
+              res.json(dbTodo);
+            });
+          });
 
         // Finding all Chirps, and then returning them to the user as JSON.
         // Sequelize queries are asynchronous, which helps with perceived speed.
@@ -27,10 +34,6 @@ module.exports = function (app) {
 
         Holiday.create({
             question: req.body.question,
-            choice1: req.body.choice1,
-            choice2: req.body.choice2,
-            choice3: req.body.choice3,
-            choice4: req.body.choice4,
             userAns: req.body.userAns
         }).then(function (results) {
             // `results` here would be the newly created chirp
@@ -39,4 +42,81 @@ module.exports = function (app) {
 
     });
 
+};
+
+var db = require("../models");
+
+// Routes
+// =============================================================
+module.exports = function(app) {
+
+  // GET route for getting all of the posts
+  app.get("/api/quiz/", function(req, res) {
+    db.Post.findAll({})
+      .then(function(dbPost) {
+        res.json(dbPost);
+      });
+  });
+
+  // Get route for returning posts of a specific category
+  app.get("/api/posts/category/:category", function(req, res) {
+    db.Post.findAll({
+      where: {
+        category: req.params.category
+      }
+    })
+      .then(function(dbPost) {
+        res.json(dbPost);
+      });
+  });
+
+  // Get route for retrieving a single post
+  app.get("/api/posts/:id", function(req, res) {
+    db.Post.findOne({
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(function(dbPost) {
+        res.json(dbPost);
+      });
+  });
+
+  // POST route for saving a new post
+  app.post("/api/posts", function(req, res) {
+    console.log(req.body);
+    db.Post.create({
+      title: req.body.title,
+      body: req.body.body,
+      category: req.body.category
+    })
+      .then(function(dbPost) {
+        res.json(dbPost);
+      });
+  });
+
+  // DELETE route for deleting posts
+  app.delete("/api/posts/:id", function(req, res) {
+    db.Post.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(function(dbPost) {
+        res.json(dbPost);
+      });
+  });
+
+  // PUT route for updating posts
+  app.put("/api/posts", function(req, res) {
+    db.Post.update(req.body,
+      {
+        where: {
+          id: req.body.id
+        }
+      })
+      .then(function(dbPost) {
+        res.json(dbPost);
+      });
+  });
 };
