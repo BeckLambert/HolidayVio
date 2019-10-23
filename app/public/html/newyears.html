@@ -13,6 +13,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
     <link rel="stylesheet" type="text/css" href="../assets/css/newyearscss.css">
     <title>New Years Day</title>
 </head>
@@ -68,37 +70,73 @@
             </li>
         </ul>
     </nav>
-    <div class="col-md-6">
-        <h1 class="title">New Years Day!</h1>
-    </div>
-    <div class="row">
-        <h3 class="sub"> Let's see how many days are left until:</h3>
-    </div>
-    </div>
-    <p id="demo"></p>
-    <script>
-        var deadline = new Date("Dec 31, 2019 23:59:59").getTime();
-        var x = setInterval(function () {
-            var now = new Date().getTime();
-            var t = deadline - now;
-            var days = Math.floor(t / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((t % (1000 * 60)) / 1000);
-            document.getElementById("demo").innerHTML = days + "D "
-                + hours + "H " + minutes + "M " + seconds + "S ";
-            if (t < 0) {
-                clearInterval(x);
-                document.getElementById("demo").innerHTML = "HAPPY NEW YEARS!";
-            }
-        }, 1000); 
-    </script>
-    </div>
-    <!-- <div id="content">Only one div needed</div> -->
 
-    <div class="container">
-        <div class="content">Get ready for the big day!</div>
-    </div>
+
+    <h1 class="title"></h1>
+    <canvas id="canvas">
+        <div class="holiday-body">
+            <div class="wrapper">
+                <nav class="tabs">
+                    <div class="selector">
+                        <a data-href="" href="#">Home |</a>
+                        <a data-href="" href="#">Holidays |</a>
+                        <a data-href="" href="#">Quiz</a>
+                    </div>
+                </nav>
+            </div>>
+        </div>
+        <div class="row">
+            <h3 class="sub"> Let's see how many days are left until:</h3>
+        </div>
+        </div>
+        <div class="foo">
+            <span class="letter" data-letter="H">H</span>
+            <span class="letter" data-letter="A">A</span>
+            <span class="letter" data-letter="P">P</span>
+            <span class="letter" data-letter="P">P</span>
+            <span class="letter" data-letter="Y">Y</span>
+            <span class="letter" data-letter="V">V</span>
+            <span class="letter" data-letter="A">A</span>
+            <span class="letter" data-letter="L">L</span>
+            <span class="letter" data-letter="E">E</span>
+            <span class="letter" data-letter="N">N</span>
+            <span class="letter" data-letter="T">T</span>
+            <span class="letter" data-letter="I">I</span>
+            <span class="letter" data-letter="N">N</span>
+            <span class="letter" data-letter="E">E</span>
+            <span class="letter" data-letter="S">S</span>
+            <span class="letter" data-letter="D">D</span>
+            <span class="letter" data-letter="A">A</span>
+            <span class="letter" data-letter="Y">Y</span>
+        </div>
+
+
+
+        <p id="demo"></span>
+            <script>
+                var deadline = new Date("Dec 31, 2019 23:59:59").getTime();
+                var x = setInterval(function () {
+                    var now = new Date().getTime();
+                    var t = deadline - now;
+                    var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((t % (1000 * 60)) / 1000);
+                    document.getElementById("demo").innerHTML = days + "D "
+                        + hours + "H " + minutes + "M " + seconds + "S ";
+                    if (t < 0) {
+                        clearInterval(x);
+                        document.getElementById("demo").innerHTML = "HAPPY NEW YEARS!";
+                    }
+                }, 1000); 
+            </script>
+            </div>
+            <!-- <div id="content">Only one div needed</div> -->
+
+            <div class="container">
+                <div class="content">Get ready for the big day!</div>
+            </div>
+    </canvas>
     <script type="text/javascript" src="../../models/newyears.js"></script>
 </body>
 
