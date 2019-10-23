@@ -133,23 +133,41 @@
 //   .container {
 //     margin: 0 auto;
 //   } */
+@import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:900);
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+@import url(https://fonts.googleapis.com/css?family=Candal);
+@import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
+@import url(https://fonts.googleapis.com/css?family=Monoton);
+@import url(https://fonts.googleapis.com/css?family=Arvo:700);
+@import url(https://fonts.googleapis.com/css?family=Seaweed+Script);
 #vday {
   background-repeat: no-repeat;
   background-image: url("../images/valentinesday.png");
+  background-blend-mode: soft-light;
   background-attachment: fixed;
   background-position: center;
+  position: relative;
   /* background-color: u */
   color: whitesmoke;
   text-align: center; }
 
 #demo {
   font-size: 90px;
-  padding-top: 350px;
-  border: 3px whitesmoke dotted; }
+  padding-top: 20px; }
+
+canvas {
+  position: absolute;
+  left: 0;
+  top: 350;
+  width: 100%;
+  height: 10%;
+  background-color: rgba(0, 0, 0, 0.2); }
 
 .title {
   font-family: 'Mirza', cursive;
-  font-size: 90px; }
+  font-size: 60px;
+  color: red; }
 
 * {
   box-sizing: border-box;
@@ -166,7 +184,8 @@ body {
   animation: 1s pulse infinite;
   margin: auto;
   position: relative;
-  width: 40vmax; }
+  width: 40vmax;
+  size: 50%; }
 
 .heart:before,
 .heart:after {
@@ -239,5 +258,286 @@ h1:after {
 @keyframes pulse {
   80% {
     transform: scale(0.9); } }
+body {
+  background: #000;
+  color: #fff;
+  position: relative; }
+
+.chrome {
+  position: relative;
+  background-image: -webkit-linear-gradient(#378DBC 0%, #B6E8F1 46%, #ffffff 50%, #32120E 54%, #FFC488 58%, #582C11 90%, #EC9B4E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 4px #f5f5f5;
+  font-size: 200px;
+  font-family: 'Titillium Web', sans-serif;
+  font-style: italic;
+  margin: 0;
+  line-height: 1; }
+
+.chrome:before {
+  content: 'CHROME';
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background-image: -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
+  background-position: -680px 0;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0;
+  padding-right: 300px;
+  -webkit-animation-name: chrome_effect;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite; }
+
+.dreams {
+  position: absolute;
+  margin: 0px;
+  font-family: 'Mr Dafoe', cursive;
+  font-size: 160px;
+  color: #F975F7;
+  transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-15deg);
+  /* Safari and Chrome */
+  margin-left: 400px;
+  margin-top: -120px;
+  -webkit-text-stroke: 1px #f008b7;
+  -webkit-filter: drop-shadow(2px 2px 20px #f008b7);
+  z-index: 20; }
+
+.windows .dreams {
+  -webkit-text-stroke: 4px #f008b7; }
+
+.vectro {
+  position: relative;
+  -webkit-text-stroke: 0.1px #f1f1f1;
+  font-family: 'Righteous', cursive;
+  font-size: 50px;
+  margin: 150px 0 50px 0;
+  color: red;
+  -webkit-text-fill-color: #F10C20;
+  -webkit-filter: drop-shadow(2px 2px 15px #F10C20);
+  font-style: italic;
+  padding-right: 20px; }
+
+.windows .vectro {
+  -webkit-text-stroke: 4px #f1f1f1; }
+
+.vectro-body {
+  -webkit-background-clip: text;
+  background-image: -webkit-linear-gradient(#C3BFB4 0%, #FDFCFA 50%, #E8E7E5 51%, #757172 52%, #E8E9DB 100%);
+  -webkit-filter: drop-shadow(2px 2px 15px #3F59F4); }
+
+.vectro-red {
+  color: #F10C20;
+  -webkit-text-fill-color: #F10C20;
+  -webkit-text-stroke: 0;
+  -webkit-filter: drop-shadow(2px 2px 15px #F10C20);
+  font-style: italic;
+  padding-right: 20px; }
+
+.windows .vectro-red {
+  padding-right: 30px; }
+
+.vectro-green {
+  color: #6BFF2B;
+  -webkit-text-fill-color: #6BFF2B;
+  -webkit-filter: drop-shadow(2px 2px 15px #6BFF2B);
+  -webkit-text-stroke: 0;
+  font-style: italic;
+  padding-right: 20px;
+  margin-left: -20px; }
+
+.windows .vectro-green {
+  padding-right: 30px;
+  margin-left: -30px; }
+
+.vectro-blue {
+  color: #3F59F4;
+  -webkit-text-fill-color: #3F59F4;
+  -webkit-filter: drop-shadow(2px 2px 15px #3F59F4);
+  -webkit-text-stroke: 0;
+  font-style: italic;
+  padding-right: 20px;
+  margin-left: -20px; }
+
+.windows .vectro-blue {
+  padding-right: 30px;
+  margin-left: -30px; }
+
+.street-machine {
+  position: relative; }
+
+.street {
+  position: relative;
+  font-family: 'Candal', sans-serif;
+  font-size: 180px;
+  font-style: italic;
+  -webkit-text-stroke: 0.1px #ed2121;
+  color: #fff;
+  text-shadow: -10px 10px 0px #ed2121;
+  margin: 0; }
+
+.windows .street {
+  -webkit-text-stroke: 4px #ed2121; }
+
+.street:before {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 665px;
+  top: 83px;
+  left: 48px;
+  background: #ed2121;
+  box-shadow: -8px 13px #ed2121; }
+
+.windows .street:before {
+  left: 55px;
+  width: 659px; }
+
+.street:after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 639px;
+  top: 109px;
+  left: 36px;
+  background: #ed2121;
+  box-shadow: -4px 13px #ed2121; }
+
+.machine {
+  position: absolute;
+  left: 50px;
+  top: 350px;
+  font-family: 'Mr Dafoe', cursive;
+  font-size: 130px;
+  transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-15deg);
+  /* Safari and Chrome */
+  color: #ed2121;
+  margin: 0;
+  margin-top: -160px;
+  padding-left: 430px;
+  text-shadow: 1px 2px 0px #F9D2D2; }
+
+.windows .machine {
+  margin-top: -200px; }
+
+.victory {
+  position: relative;
+  font-family: 'Permanent Marker', cursive;
+  font-variant: small-caps;
+  font-size: 180px;
+  -webkit-transform: skew(-15deg, -15deg);
+  padding-left: 80px;
+  background-image: -webkit-linear-gradient(#FF0FF8 0%, #F9F9F7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  -webkit-filter: drop-shadow(2px 2px 20px #f008b7); }
+
+.victory:before {
+  content: '-';
+  position: absolute;
+  bottom: -98px;
+  left: 254px;
+  background-image: -webkit-linear-gradient(#F3C8F3 0%, #F3C8F3 100%);
+  -webkit-background-clip: text;
+  text-shadow: 70px -7px #F3C8F3; }
+
+.victory:after {
+  content: '-';
+  position: absolute;
+  bottom: -85px;
+  left: 395px;
+  background-image: -webkit-linear-gradient(#F3C8F3 0%, #F3C8F3 100%);
+  -webkit-background-clip: text;
+  text-shadow: 70px -5px #F3C8F3; }
+
+.victory-v {
+  position: relative;
+  background-image: -webkit-linear-gradient(#FF0FF8 0%, #F9F9F7 100%);
+  -webkit-background-clip: text;
+  padding-right: 18px;
+  margin-right: -18px; }
+
+.victory-v:before {
+  content: '-';
+  position: absolute;
+  top: -71px;
+  left: -71px;
+  background-image: -webkit-linear-gradient(#FF0FF8 0%, #FC96FC 100%);
+  -webkit-background-clip: text; }
+
+.victory-v:after {
+  content: '-';
+  position: absolute;
+  top: -72px;
+  left: 103px;
+  background-image: -webkit-linear-gradient(#FF0FF8 0%, #FC96FC 100%);
+  -webkit-background-clip: text; }
+
+.future-cop {
+  position: relative;
+  margin-top: 500px; }
+
+/* Ibrahim Jabbari -- www.ibrahimjabbari.com */
+body {
+  background-color: #222; }
+
+.plate {
+  width: 410px;
+  margin: 10% auto; }
+
+.shadow {
+  color: #fff;
+  font-family: Arvo;
+  font-weight: bold;
+  text-shadow: -3px -3px 0 #222, 3px -3px 0 #222, -3px 3px 0 #222, 3px 3px 0 #222, 4px 4px 0 #fff, 5px 5px 0 #fff, 6px 6px 0 #fff, 7px 7px 0 #fff;
+  line-height: 0.8em;
+  letter-spacing: 0.1em;
+  transform: scaleY(0.7);
+  -webkit-transform: scaleY(0.7);
+  -moz-transform: scaleY(0.7);
+  margin: 0;
+  text-align: center; }
+
+.script {
+  font-family: "Seaweed Script";
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  position: relative;
+  margin: 0; }
+
+.script span {
+  background-color: #222;
+  padding: 0 0.3em; }
+
+.script:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  width: 100%;
+  border-bottom: 3px solid #fff; }
+
+.text1 {
+  font-size: 60px; }
+
+.text2 {
+  font-size: 120px;
+  text-align: left;
+  margin-left: -250px; }
+
+.text3 {
+  font-size: 100px; }
 
 /*# sourceMappingURL=valentines.css.map */

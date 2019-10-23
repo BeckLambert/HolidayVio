@@ -23,7 +23,4 @@ var holiday = {
 };
 
 module.exports = holiday;
-=======
-    // update: function (objColVals);
-}
-
+    

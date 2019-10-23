@@ -32,49 +32,59 @@
                 </div>
             </nav>
         </div>>
-
-        <div class="card col-md-6 text-center">
-            <table class="table table-sm table-hover" id="holiday-events">
-                <thead>
-                    <tr>
-                        <th scope="col">NEXT UPCOMING HOLIDAY IS: HALLOWEEN!</th>
-
-                    </tr>
-                </thead>
-            </table>
-        </div>
-        <div class="col-md-6">
-            <h1 class="title">New Years Day!</h1>
-        </div>
-        <div class="row">
-            <h3 class="sub"> Let's see how many days are left until:</h3>
-        </div>
     </div>
-    <p id="demo"></p>
-    <script>
-        var deadline = new Date("Dec 31, 2019 23:59:59").getTime();
-        var x = setInterval(function () {
-            var now = new Date().getTime();
-            var t = deadline - now;
-            var days = Math.floor(t / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((t % (1000 * 60)) / 1000);
-            document.getElementById("demo").innerHTML = days + "D "  
-                + hours + "H " + minutes + "M " + seconds + "S ";
-            if (t < 0) {
-                clearInterval(x);
-                document.getElementById("demo").innerHTML = "HAPPY NEW YEARS!";
-            }
-        }, 1000); 
-    </script>
+    <div class="row">
+        <h3 class="sub"> Let's see how many days are left until:</h3>
     </div>
-    <!-- <div id="content">Only one div needed</div> -->
+    </div>
+    <div class="foo">
+        <span class="letter" data-letter="H">H</span>
+        <span class="letter" data-letter="A">A</span>
+        <span class="letter" data-letter="P">P</span>
+        <span class="letter" data-letter="P">P</span>
+        <span class="letter" data-letter="Y">Y</span>
+        <span class="letter" data-letter="V">V</span>
+        <span class="letter" data-letter="A">A</span>
+        <span class="letter" data-letter="L">L</span>
+        <span class="letter" data-letter="E">E</span>
+        <span class="letter" data-letter="N">N</span>
+        <span class="letter" data-letter="T">T</span>
+        <span class="letter" data-letter="I">I</span>
+        <span class="letter" data-letter="N">N</span>
+        <span class="letter" data-letter="E">E</span>
+        <span class="letter" data-letter="S">S</span>
+        <span class="letter" data-letter="D">D</span>
+        <span class="letter" data-letter="A">A</span>
+        <span class="letter" data-letter="Y">Y</span>
+    </div>
 
-    <div class="container">
-        <div class="content">Get ready for the big day!</div>
-    </div>
-    <script type="text/javascript" src="../../models/newyears.js"></script>
+
+
+    <p id="demo"></span>
+        <script>
+            var deadline = new Date("Dec 31, 2019 23:59:59").getTime();
+            var x = setInterval(function () {
+                var now = new Date().getTime();
+                var t = deadline - now;
+                var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((t % (1000 * 60)) / 1000);
+                document.getElementById("demo").innerHTML = days + "D "
+                    + hours + "H " + minutes + "M " + seconds + "S ";
+                if (t < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "HAPPY NEW YEARS!";
+                }
+            }, 1000); 
+        </script>
+        </div>
+        <!-- <div id="content">Only one div needed</div> -->
+
+        <div class="container">
+            <div class="content">Get ready for the big day!</div>
+        </div>
+        <script type="text/javascript" src="../../models/newyears.js"></script>
 </body>
 
 </html>
