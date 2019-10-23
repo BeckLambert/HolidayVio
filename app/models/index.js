@@ -30,41 +30,6 @@ Object.keys(db).forEach(function(modelName) {
   }
 });
 
-function(displayQuestion){
-  connection.query("SELECT question FROM quiz", function(err, res){
-    if (err) throw err;
-      Quiz.question.forEach(
-        (question) => {
-          console.log(question.dataValues);
-          console.log(choice1.dataValues);
-          console.log(choice2.dataValues);
-          console.log(choice3.dataValues);
-          console.log(choice4.dataValues);
-        }
-      )
-  })
-}
-
-//forEach question
-//console question and answer set(choice1-4)
-
-// Quiz.update(
-//   (userAns) => {
-//     console.log(userAns.dataValues);
-//   }
-// )
-
-// Model.findAll({
-//   attributes: { exclude: ['userAns'] }
-// }).then(function(result){
-//   console.log(attributes);
-// })
-
-
-
-
-
-
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
