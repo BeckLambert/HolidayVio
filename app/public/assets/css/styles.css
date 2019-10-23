@@ -5,45 +5,90 @@ body {
     font-size: 18px;
     line-height: 34px;
     background-image: url('../images/home_background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     
 }
 
 #homeLogo {
     font-family: 'Fredericka the Great', cursive;
-    text-align: center;
+    position: absolute;
     font-size: 75px;
     margin-top: 25px;
-}
-
-#rowOne {
-    margin-top: 75px;
-    margin-left: 295px;
-}
-
-#rowTwo {
-    margin-top: 70px;
-    margin-left: 105px;
+    left: 875px;
+    margin-right: 45px;
 }
 
 #underline {
     width: 30%;
-    margin-left: 450px;
-    top: 0;
+    margin-right: 45px;
+    top: 100px;
+    float: right;
+    position: relative;
 }
 
-    /* CHRISTMAS PAGE CSS */
+#buttons {
+   margin-top: 20px;
+   float: left;
+   margin-left: 230px;
+   width: 70%;
+   font-size: 15px;
+   font-weight: 20px;
+}
 
-    #xmasBody {
-        background-image: url('../images/christmasBackground.jpg');
-        /* background-repeat: no-repeat; */
-        background-attachment: fixed;
-        background-position: center;
-        height: auto;
-    }
+#slogan {
+    text-align: center;
+    margin-top: 220px;
+    float: left;
+    margin-left: 200px;
+    font-weight: 900;
+}
 
-    #demo {
-        font-size: 90px;
-        
-    }
+#lineOne {
+    font-size: 45px
+}
+
+/* CHRISTMAS PAGE CSS */
+
+#xmasBody {
+    background-image: url('../images/christmasBackground.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+     background-position: center;
+     background-size: cover;
+    height: auto;
+    /* width: 100vmax; */
+}
+
+#demo {
+    font-size: 75px;
+    margin-left: 400px;
+    top: -500; 
+}
+
+h4 {
+    bottom: 300;
+}
+
+.daysTill {
+    position: absolute;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+  
+    font-family: 'Helvetica';
+    /* line-height: 100vh; */
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: black;
+    text-align: center;
+    font-size: 50px;
+  }
+
+ 
+
+    
 
 
