@@ -12,43 +12,68 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
     <link rel="stylesheet" type="text/css" href="../assets/css/newyearscss.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
     <title>New Years Day</title>
 </head>
 
 <body>
 
-    <h1 class="title"></h1>
-    <canvas id="canvas"></canvas>
-    <div class="holiday-body">
-        <div class="wrapper">
-            <nav class="tabs">
-                <div class="selector">
-                    <a data-href="" href="#">Home |</a>
-                    <a data-href="" href="#">Holidays |</a>
-                    <a data-href="" href="#">Quiz</a>
-                </div>
-            </nav>
-        </div>>
+    <div class="area"></div>
+    <nav class="main-menu">
+        <ul>
+            <li>
+                <a href="home.html">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
+                        Home
+                    </span>
+                </a>
 
-        <div class="card col-md-6 text-center">
-            <table class="table table-sm table-hover" id="holiday-events">
-                <thead>
-                    <tr>
-                        <th scope="col">NEXT UPCOMING HOLIDAY IS: HALLOWEEN!</th>
+            </li>
+            <li class="has-subnav">
+                <a href="thanksgiving.html">
+                    <i class="fa fa-laptop fa-2x"></i>
+                    <span class="nav-text">
+                        Thanksgiving
+                    </span>
+                </a>
 
-                    </tr>
-                </thead>
-            </table>
-        </div>
-        <div class="col-md-6">
-            <h1 class="title">New Years Day!</h1>
-        </div>
-        <div class="row">
-            <h3 class="sub"> Let's see how many days are left until:</h3>
-        </div>
+            </li>
+            <li class="has-subnav">
+                <a href="christmas.html">
+                    <i class="fa fa-list fa-2x"></i>
+                    <span class="nav-text">
+                        Christmas
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="newyears.html">
+                    <i class="fa fa-folder-open fa-2x"></i>
+                    <span class="nav-text">
+                        New Years
+                    </span>
+                </a>
+
+            </li>
+            <li>
+                <a href="valentines.html">
+                    <i class="fa fa-bar-chart-o fa-2x"></i>
+                    <span class="nav-text">
+                        Valentines
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="col-md-6">
+        <h1 class="title">New Years Day!</h1>
+    </div>
+    <div class="row">
+        <h3 class="sub"> Let's see how many days are left until:</h3>
+    </div>
     </div>
     <p id="demo"></p>
     <script>
@@ -60,7 +85,7 @@
             var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((t % (1000 * 60)) / 1000);
-            document.getElementById("demo").innerHTML = days + "D "  
+            document.getElementById("demo").innerHTML = days + "D "
                 + hours + "H " + minutes + "M " + seconds + "S ";
             if (t < 0) {
                 clearInterval(x);
