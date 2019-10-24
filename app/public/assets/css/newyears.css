@@ -1,9 +1,7 @@
 #newYearsBody {
+
     margin: 5px;
-    width: 100vw;
-      height: 100vh;
-    position: relative;
-background-color: black;
+    background-color: black;
   }
   
   canvas {
@@ -19,12 +17,10 @@ background-color: black;
   } 
   
   .title {
+    font-family: 'Acme', sans-serif;
     position: absolute;
-    margin: 0;
     width: 100vw;
     height: 100vh;
-  
-    font-family: 'Helvetica';
     line-height: 100vh;
     text-transform: uppercase;
     font-weight: lighter;
@@ -44,13 +40,11 @@ background-color: black;
     left: 0;
     right: 0;
     z-index: 0;
-    /* background-image: url('../images/newyears.jpg'); */
    opacity: 0.3;
 }
 
 .content {
     position: relative; 
-    /* z-index: 2; */
 }
 
 .selector {
@@ -66,7 +60,21 @@ background-color: black;
 }
 
 #demo {
+    font-family: 'Acme', sans-serif;
+    margin-top: 135px; 
     color: whitesmoke;
+}
+
+.titleOne {
+  font-family: 'Acme', sans-serif;
+  color: whitesmoke;
+  margin-left: 550px;
+  font-size: 100px;
+  margin-top: 30px;
+}
+
+#nyform {
+  margin-bottom: 2px;
 }
 
 
