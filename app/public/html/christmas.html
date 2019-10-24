@@ -6,6 +6,7 @@
     <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -74,8 +75,19 @@
         </ul>
     </nav>
 
+    <form action="https://formspree.io/xwkekelj" method="POST" enctype="multipart/form-data">
+        <div class="searchCard" class="card text-center" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Sign Up!</h5>
+                <p class="card-text">Get notified when this page unlocks.</p>
+                <input class="display" class="form-control" id="email" type="text" placeholder="johnsmith@gmail.com" />
+                <button class="xbtn btn-info" type="submit" id="send-btn">Send</button>
+            </div>
+        </div>
+    </form>
 
-    <p id="demo"></p>
+
+    <div id="demo">
     <script>
         var deadline = new Date("Dec 25, 2019 23:59:59").getTime();
         var x = setInterval(function () {
@@ -93,6 +105,7 @@
             }
         }, 1000); 
     </script>
+    </div>
 
     <h4 class="daysTill">days left until Christmas</h4>
 

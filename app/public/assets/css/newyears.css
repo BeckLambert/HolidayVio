@@ -77,6 +77,40 @@
   margin-bottom: 2px;
 }
 
+.card {
+  border-radius: 5px;
+  width: 50%;
+  margin-left: 50px;
+  float: none;
+  margin-top: 10px;
+}
+
+.searchCard {
+right: 0;
+color: #fff;
+position: fixed;
+overflow: hidden;
+top: 50px;
+}
+
+.card-text {
+  font-size: 25px;
+}
+
+.card-title {
+  text-align: center;
+}
+
+#email {
+  height: 30px;
+}
+
+#send-btn {
+  height: 34px;
+  width: 65px;
+  background-color: #999;
+}
+
 
 /* NAV BAR CSS */
 
