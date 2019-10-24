@@ -28,15 +28,14 @@ $("#chirp-submit").on("click", function(event) {
 
       $("#chirp-area").prepend(row);
 
-    // });
+    });
 
   // Empty each input box by replacing the value with an empty string
-  // $("#author").val("");
-  // $("#chirp-box").val("");
+  $("#author").val("");
+  $("#chirp-box").val("");
 });
 
-// When the page loads, grab all of our chirps
-});
+// When the page loads, grab all of our chirp
 
 $.get("/api/quiz", function(data) {
 
@@ -58,3 +57,5 @@ $.get("/api/quiz", function(data) {
   }
 
 });
+
+
