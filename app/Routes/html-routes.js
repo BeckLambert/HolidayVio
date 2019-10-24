@@ -8,28 +8,28 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/home.html"));
+    res.sendFile(path.join(__dirname, "../public"));
   });
 
   app.get("/halloween", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/halloween.html"));
+    res.sendFile(path.join(__dirname, "../public/html/halloween.html"));
   });
 
   app.get("/thanksgiving", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/thanksgiving.html"));
+    res.sendFile(path.join(__dirname, "../public/html/thanksgiving.html"));
   });
 
   app.get("/christmas", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/christmas.html"));
+    res.sendFile(path.join(__dirname, "../public/html/christmas.html"));
   });
 
   app.get("/newyears", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/newyears.html"));
+    res.sendFile(path.join(__dirname, "../public/html/newyears.html"));
   });
 
   // blog route loads blog.html
   app.get("/valentines", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/valentines.html"));
+    res.sendFile(path.join(__dirname, "../public/html/valentines.html"));
   });
 
 };

@@ -3,14 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
     <title>Halloween</title>
 </head>
 
 <body id="halloweenBody">
-
+    <!-- NAV BAR START -->
     <div class="area"></div>
     <nav class="main-menu">
         <ul>
@@ -19,6 +23,15 @@
                     <i class="fa fa-home fa-2x"></i>
                     <span class="nav-text">
                         Home
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="halloween.html">
+                    <i class="fa fa-laptop fa-2x"></i>
+                    <span class="nav-text">
+                        Halloween
                     </span>
                 </a>
 
@@ -60,8 +73,7 @@
             </li>
         </ul>
     </nav>
-    <!-- <button id="btnCreateEvents" class="btn btn-primary" onclick="makeApiCall();">
-        Create Events</button> -->
+    <!-- NAV BAR END -->
 
     <div id="divifm">
         <iframe height="300" width="365" id="ifmCalendar" src="https://www.google.com/calendar/embed?
@@ -71,85 +83,111 @@
             frameborder="0" scrolling="no">
         </iframe>
     </div>
-    <script>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <p class="cool-font">Name</p>
+                <input class="form-control" type="text" id="author" placeholder="Name Goes Here">
+                <br>
+                <p class="cool-font">INSERT quote</p>
+                <textarea class="form-control" rows="3" id="chirp-box" placeholder="Tell us your favorite quote!"></textarea>
+                <button id="chirp-submit" class="btn btn-lg pull-right">Submit!</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h2>Quotes</h2>
+                <hr>
+                <div id="chirp-area"></div>
+            </div>
+        </div>
+
+    </div>
+    <!-- <script> -->
         // < !--Google api console clientID and apiKey-- >
 
-        var clientId = '438116086517-of4gasrgan2u93l54tov3s307hnbjae4.apps.googleusercontent.com';
-        var apiKey = 'AIzaSyBVSuwsFhC9ezEqfYgsLR8Mt2iWnPPkBVY';
+    //     var clientId = '438116086517-of4gasrgan2u93l54tov3s307hnbjae4.apps.googleusercontent.com';
+    //     var apiKey = 'AIzaSyBVSuwsFhC9ezEqfYgsLR8Mt2iWnPPkBVY';
 
-        // enter the scope of current project (this API must be turned on in the Google console)
-        var scopes = 'https://www.googleapis.com/auth/calendar';
+    //     // enter the scope of current project (this API must be turned on in the Google console)
+    //     var scopes = 'https://www.googleapis.com/auth/calendar';
 
 
-        // OAuth2 functions
-        function handleClientLoad() {
-            gapi.client.setApiKey(apiKey);
-            window.setTimeout(checkAuth, 1);
-        }
+    //     // OAuth2 functions
+    //     function handleClientLoad() {
+    //         gapi.client.setApiKey(apiKey);
+    //         window.setTimeout(checkAuth, 1);
+    //     }
 
-        //To authenticate
-        function checkAuth() {
-            gapi.auth.authorize({ client_id: clientId, scope: scopes, immediate: true }, handleAuthResult);
-        }
+    //     //To authenticate
+    //     function checkAuth() {
+    //         gapi.auth.authorize({ client_id: clientId, scope: scopes, immediate: true }, handleAuthResult);
+    //     }
 
-        // This is the resource we will pass while calling api function
-        var resource = {
-            "summary": "My Event",
-            "start": {
-                "dateTime": today
-            },
-            "end": {
-                "dateTime": twoHoursLater
-            },
-            "description": "We are organizing events",
-            "location": "US",
-            "attendees": [
-                {
-                    "email": "attendee1@gmail.com",
-                    "displayName": "Jhon",
-                    "organizer": true,
-                    "self": false,
-                    "resource": false,
-                    "optional": false,
-                    "responseStatus": "needsAction",
-                    "comment": "This is my demo event",
-                    "additionalGuests": 3
+    //     // This is the resource we will pass while calling api function
+    //     var resource = {
+    //         "summary": "My Event",
+    //         "start": {
+    //             "dateTime": dateTime
+    //         },
+    //         "end": {
+    //             "dateTime": twoHoursLater
+    //         },
+    //         "description": "We are organizing events",
+    //         "location": "US",
+    //         "attendees": [
+    //             {
+    //                 "email": "attendee1@gmail.com",
+    //                 "displayName": "Jhon",
+    //                 "organizer": true,
+    //                 "self": false,
+    //                 "resource": false,
+    //                 "optional": false,
+    //                 "responseStatus": "needsAction",
+    //                 "comment": "This is my demo event",
+    //                 "additionalGuests": 3
 
-                },
-                {
-                    "email": "attendee2@gmail.com",
-                    "displayName": "Marry",
-                    "organizer": true,
-                    "self": false,
-                    "resource": false,
-                    "optional": false,
-                    "responseStatus": "needsAction",
-                    "comment": "This is an official event",
-                    "additionalGuests": 3
-                }
-            ],
-        };
+    //             },
+    //             {
+    //                 "email": "attendee2@gmail.com",
+    //                 "displayName": "Marry",
+    //                 "organizer": true,
+    //                 "self": false,
+    //                 "resource": false,
+    //                 "optional": false,
+    //                 "responseStatus": "needsAction",
+    //                 "comment": "This is an official event",
+    //                 "additionalGuests": 3
+    //             }
+    //         ],
+    //     };
 
-        function makeApiCall() {
-            gapi.client.load('calendar', 'v3', function () { // load the calendar api (version 3)
-                var request = gapi.client.calendar.events.insert
-                    ({
-                        'calendarId': '24tn4fht2tr6m86efdiqqlsedk@group.calendar.google.com',
-                        // calendar ID which id of Google Calendar where you are creating events. this can be copied from your Google
-                        // Calendar user view.
+    //     function makeApiCall() {
+    //         gapi.client.load('calendar', 'v3', function () { // load the calendar api (version 3)
+    //             var request = gapi.client.calendar.events.insert
+    //                 ({
+    //                     'calendarId': '24tn4fht2tr6m86efdiqqlsedk@group.calendar.google.com',
+    //                     // calendar ID which id of Google Calendar where you are creating events. this can be copied from your Google
+    //                     // Calendar user view.
 
-                        "resource": resource // above resource will be passed here
-                    });
-            })
-        }
-    </script>
+    //                     "resource": resource // above resource will be passed here
+    //                 });
+    //         })
+    //     }
+    // </script>
 
-<div id="storelocatorwidget" style="width:100%;"><p>Loading <a href="https://www.storelocatorwidgets.com">Locator Software</a>...</p></div>
-<script type="text/javascript" src="//cdn.storelocatorwidgets.com/widget/mapbox-gl.js"></script>
-<script type="text/javascript" src="//cdn.storelocatorwidgets.com/widget/mapbox-gl-geocoder.js"></script>
-<script type="text/javascript" id="storelocatorscript" data-uid="1ba4cdedcae1ebd38506333156158499" data-platform="Mapbox" src="//cdn.storelocatorwidgets.com/widget/widget.js"></script>
+    <!-- <div id="storelocatorwidget" style="width:100%;">
+        <p>Loading <a href="https://www.storelocatorwidgets.com">Locator Software</a>...</p>
+    </div>
+    <script type="text/javascript" src="//cdn.storelocatorwidgets.com/widget/mapbox-gl.js"></script>
+    <script type="text/javascript" src="//cdn.storelocatorwidgets.com/widget/mapbox-gl-geocoder.js"></script>
+    <script type="text/javascript" id="storelocatorscript" data-uid="1ba4cdedcae1ebd38506333156158499"
+        data-platform="Mapbox" src="//cdn.storelocatorwidgets.com/widget/widget.js"></script>
 
-</div>
+    </div> -->
 
 </body>
 

@@ -13,8 +13,8 @@ app.use(express.static("public"));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-require("./routes/api-routes.js")(app);
-require("./routes/html-routes.js")(app);
+require("./app/routes/api-routes")(app);
+require("./app/routes/html-routes")(app);
 
 
 
