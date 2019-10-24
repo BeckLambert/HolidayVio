@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="../assets/css/thanksgiving.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
     <title>Thanksgiving</title>
 
 </head>
@@ -84,10 +83,10 @@
         </div>
     </form>
     <!-- countdown -->
-    <div id=countdown></div>
-    <p id="demo"></p>
+    <h2>Thanksgiving is in:</h2>
+    <div id="demo">
     <script>
-        var deadline = new Date("Dec 31, 2019 23:59:59").getTime();
+        var deadline = new Date("Nov 28, 2019 23:59:59").getTime();
         var x = setInterval(function () {
             var now = new Date().getTime();
             var t = deadline - now;
@@ -103,6 +102,7 @@
             }
         }, 1000); 
     </script>
+    </div>
     <!-- link to js -->
     <script type="text/javascript" src="../assets/js/thanksgiving.js"></script>
 
