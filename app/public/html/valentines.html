@@ -20,42 +20,6 @@
 </head>
 
 <body id="vday">
-    
-        <div class="plate">
-            <p class="script"><span>HAPPY</span></p>
-            <p class="shadow text2">VALENTINE'S</p>
-            <p class="shadow text1">DAY</p>
-            <p class="shadow text3"></p>
-            <p class="script"><span>How many days until:</span></p>
-        </div>
-
-        <!-- <h1 class="title">Happy Valentine's Day</h1> -->
-        <!-- <h1>You're the HTML to my CSS</h1> -->
-
-        <p id="demo"></p>
-        <!-- <div class="heart">
-            <span class="face"></span>
-        </div> -->
-        <script>
-            var deadline = new Date("Feb 13, 2020 23:59:59").getTime();
-            var x = setInterval(function () {
-                var now = new Date().getTime();
-                var t = deadline - now;
-                var days = Math.floor(t / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((t % (1000 * 60)) / 1000);
-                document.getElementById("demo").innerHTML = days + "Days "
-                    + hours + "Hours " + minutes + "Mins " + seconds + "S ";
-                if (t < 0) {
-                    clearInterval(x);
-                    document.getElementById("demo").innerHTML = "HAPPY VALENTINE'S DAY!";
-                }
-            }, 1000); 
-        </script>
-        </div>
-        <!-- <h4>Days Left Until Valentine's Day!!</h4> -->
-    
     <div class="area"></div>
     <nav class="main-menu">
         <ul>
@@ -67,6 +31,15 @@
                     </span>
                 </a>
 
+            </li>
+            <li class="has-subnav">
+                    <a href="halloween.html">
+                        <i class="fa fa-laptop fa-2x"></i>
+                        <span class="nav-text">
+                            Halloween
+                        </span>
+                    </a>
+    
             </li>
             <li class="has-subnav">
                 <a href="thanksgiving.html">
@@ -106,15 +79,17 @@
         </ul>
     </nav>
 
-    <!-- <h1 class="title">Happy Valentine's Day</h1>
-    <h1>You're the HTML to my CSS</h1>
-    <div class="heart">
-        <span class="face"></span>
-    </div> -->
+    <div class="plate">
+            <!-- <p class="script"><span>HAPPY</span></p> -->
+            <p class="shadow text2">VALENTINE'S</p>
+            <p class="shadow text1">DAY:</p>
+            <p class="shadow text3"></p>
+            <!-- <p class="script"><span>How many days until:</span></p> -->
+     </div>
 
-    <p id="demo"></p>
+    <div id="demo">
     <script>
-        var deadline = new Date("Feb 13, 2020 23:59:59").getTime();
+        var deadline = new Date("Feb 14, 2020 23:59:59").getTime();
         var x = setInterval(function () {
             var now = new Date().getTime();
             var t = deadline - now;
@@ -122,26 +97,17 @@
             var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((t % (1000 * 60)) / 1000);
-            document.getElementById("demo").innerHTML = days + "Days "
-                + hours + "Hours " + minutes + "Mins " + seconds + "S ";
+            document.getElementById("demo").innerHTML = days + "D "
+                + hours + "H " + minutes + "M " + seconds + "S ";
             if (t < 0) {
                 clearInterval(x);
-                document.getElementById("demo").innerHTML = "HAPPY VALENTINE'S DAY!";
+                document.getElementById("demo").innerHTML = "HAPPY NEW YEARS!";
             }
         }, 1000); 
-    </script>
+    </script> 
     </div>
-    <h4>Days Left Until Valentine's Day!!</h4>
-    <canvas></canvas>
 </body>
-
 </html>
-
-<!-- <div class="page page-thunder-to-text">
-        <input id="input" type="text" maxlength="24" placeholder="I love you!">
-        <canvas id="canvas"></canvas>
-    </div> -->
-
 <script type="text/javascript" src="../../models/valentines.js"></script>
 </body>
 

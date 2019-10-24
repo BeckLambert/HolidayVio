@@ -1,34 +1,44 @@
-#countdown {
-    text-align: center;
+
+
+#demo {
+    position: relative;
+    font-size: 75px;
+    margin-left: 150px;
+    top: 100px; 
+    z-index: 5px;
     color: #751A33;
     font-size: 30px;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    background: linear-gradient(to bottom right, #B34233, #D28F33, #D4B95E);
-    border: 7px outset #1A8693;
-    white-space: nowrap;
-    padding: 15px;
-    margin-top: 50px;
-    margin-left: 175px;
-    margin-right: 175px;
 }
 
 #thanksgivingBody {
-    background-image: url("https://img3.goodfon.com/wallpaper/nbig/0/33/wood-autumn-leaves-pattern.jpg");
+    background-image: url("../images/thanksgivingBackground.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    margin-bottom: 350px;
 }
 
-#emailForm {
-    text-align: center;
-    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-    color: #751A33;
-    font-size: 30px;
-    border: 7px outset #1A8693;
-    background: linear-gradient(to bottom left, #B34233, #D28F33, #D4B95E);
-    padding: 15px;
-    margin-top: 40px;
-    margin-left: 175px;
-    margin-right: 175px;
+.card {
+    border-radius: 5px;
+    width: 50%;
+    margin-left: 50px;
+    float: none;
+    margin-top: 100px;
+}
+
+.searchCard {
+right: 0;
+color: #751A33;
+position: fixed;
+overflow: hidden;
+top: 250px;
+font-size: 25px;
+}
+
+#email {
+    height: 30px;
+}
+
+#send-btn {
+    height: 38px;
+    width: 85px;
 }
