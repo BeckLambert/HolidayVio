@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
     <title>Halloween</title>
 </head>
 
@@ -132,12 +132,68 @@
             <div class="col-sm-5 col-sm-offset-2">
                 <h2>Quotes:</h2>
                 <hr>
-                <div id="chirp-area"></div>
+                <div id="chirp-area"> </div>
             </div>
     </div>
 
     <!-- <div id="mapDiv"></div> -->
     <script>
+ $("#chirp-submit").on("click", function(event) {
+  event.preventDefault();
+  console.log("Worked");
+
+  // Make a newChirp object
+  var newQuiz = {
+    question: $("#author").val().trim(),
+    userAns: $("#chirp-box").val().trim(),
+    // created_at: moment().format("YYYY-MM-DD HH:mm:ss")
+  };
+
+  console.log(newQuiz);
+
+  // Send an AJAX POST-request with jQuery
+  $.post("/api/quiz", newQuiz)
+    // On success, run the following code
+    .then(function() {
+
+      var row = $("<div>");
+      row.addClass("chirp");
+
+      row.append("<p>" + newQuiz.question + "</p>");
+      row.append("<p>" + newQuiz.userAns + "</p>");
+    //   row.append("<p>At " + moment(newQuiz.created_at).format("h:mma on dddd") + "</p>");
+
+      $("#chirp-area").append(row);
+
+    });
+
+  // Empty each input box by replacing the value with an empty string
+  $("#author").val("");
+  $("#chirp-box").val("");
+});
+
+// When the page loads, grab all of our chirp
+
+$.get("/api/quiz", function(data) {
+
+  if (data.length !== 0) {
+
+    for (var i = 0; i < data.length; i++) {
+
+      var row = $("<div>");
+      row.addClass("chirp");
+
+      row.append("<p>" + data[i].question + "</p>");
+      row.append("<p>" + data[i].userAns + "</p>");
+    //   row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
+
+      $("#chirp-area").append(row);
+
+    }
+
+  }
+
+});
         // < !--Google api console clientID and apiKey-- >
 
         var clientId = '438116086517-of4gasrgan2u93l54tov3s307hnbjae4.apps.googleusercontent.com';
