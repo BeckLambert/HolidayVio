@@ -2,37 +2,37 @@
 
 // When user clicks add-btn
 $("#chirp-submit").on("click", function(event) {
-  // event.preventDefault();
+  event.preventDefault();
   console.log("Worked");
 
   // Make a newChirp object
-  // var newQuiz = {
-  //   question: $("#author").val().trim(),
-  //   userAns: $("#chirp-box").val().trim(),
-  //   created_at: moment().format("YYYY-MM-DD HH:mm:ss")
-  // };
+  var newQuiz = {
+    question: $("#author").val().trim(),
+    userAns: $("#chirp-box").val().trim(),
+    created_at: moment().format("YYYY-MM-DD HH:mm:ss")
+  };
 
-  // console.log(newQuiz);
+  console.log(newQuiz);
 
   // Send an AJAX POST-request with jQuery
-  // $.post("/api/quiz", newQuiz)
+  $.post("/api/quiz", newQuiz)
     // On success, run the following code
-    // .then(function() {
+    .then(function() {
 
-    //   var row = $("<div>");
-    //   row.addClass("chirp");
+      var row = $("<div>");
+      row.addClass("chirp");
 
-    //   row.append("<p>" + newQuiz.question + " chirped: </p>");
-    //   row.append("<p>" + newQuiz.userAns + "</p>");
-    //   row.append("<p>At " + moment(newQuiz.created_at).format("h:mma on dddd") + "</p>");
+      row.append("<p>" + newQuiz.question + " chirped: </p>");
+      row.append("<p>" + newQuiz.userAns + "</p>");
+      row.append("<p>At " + moment(newQuiz.created_at).format("h:mma on dddd") + "</p>");
 
-    //   $("#chirp-area").prepend(row);
+      $("#chirp-area").prepend(row);
 
-    // });
+    });
 
   // Empty each input box by replacing the value with an empty string
-  // $("#author").val("");
-  // $("#chirp-box").val("");
+  $("#author").val("");
+  $("#chirp-box").val("");
 });
 
 // When the page loads, grab all of our chirps
