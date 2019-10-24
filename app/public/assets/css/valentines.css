@@ -1,4 +1,138 @@
+/* // // .page-thunder-to-text {
+// // 	position: relative;
+// // 	overflow: hidden;
 
+// // 	canvas {
+// // 		display: block;
+// // 	}
+
+// // 	input {
+// // 		position: absolute;
+// // 		bottom: 50px;
+// // 		left: 0;
+// // 		right: 0;
+// // 		display: block;
+// // 		outline: none;
+// // 		background-color: rgba(38, 50, 56, 0.2);
+// // 		color: #ffffff;
+// // 		border: none;
+// // 		width: 50%;
+// // 		min-width: 500px;
+// // 		max-width: 100%;
+// // 		margin: auto;
+// // 		height: 60px;
+// // 		line-height: 60px;
+// // 		font-size: 40px;
+// // 		padding: 0 20px;
+
+// // 		&:hover, &:focus {
+// // 			border: 1px solid rgba(38, 50, 56, 0.6);
+// // 		}
+
+// // 		&::-webkit-input-placeholder {
+// // 			color: rgba(#ffffff, 0.1);
+// // 		}
+// // 	}
+// // }
+
+// // .heart {
+// //     width: 100px;
+// //     height: 100px;
+// //     position: absolute;
+// //     left: 50%;
+// //     top: 50%;
+// //     transform: translate(-50%, -50%);
+// //     background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
+// //     background-position: 0 0;
+// //     cursor: pointer;
+// //     animation: fave-heart 1s steps(28);
+// //   }
+// //   .heart:hover {
+// //     background-position: -2800px 0;
+// //     transition: background 1s steps(28);
+// //   }
+// //   @keyframes fave-heart {
+// //     0% {
+// //       background-position: 0 0;
+// //     }
+// //     100% {
+// //       background-position: -2800px 0;
+// //     }
+// //   }
+  
+// * {
+//     box-sizing: border-box;
+//     margin: 0;
+//     padding: 0;
+//   }
+  
+//   body {
+//     background-color: #ffd54f;
+//   }
+  
+//   .container {
+//     color: #333;
+//     text-align: center;
+//   }
+  
+//   h1 {
+//     font-weight: normal;
+//   }
+  
+//   li {
+//     display: inline-block;
+//     font-size: 1.5em;
+//     list-style-type: none;
+//     padding: 1em;
+//     text-transform: uppercase;
+//   }
+  
+//   li span {
+//     display: block;
+//     font-size: 4.5rem;
+//   }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+/* //   /* general styling */
+/* //   html, body {
+//     height: 100%;
+//     margin: 0;
+//   }
+  
+  // body {
+  //   -webkit-box-align: center;
+  //   -ms-flex-align: center;
+  //   align-items: center;
+  //   display: -webkit-box;
+  //   display: -ms-flexbox;
+  //   display: flex;
+  //   font-family: -apple-system, 
+  //     BlinkMacSystemFont, 
+  //     "Segoe UI", 
+  //     Roboto, 
+  //     Oxygen-Sans, 
+  //     Ubuntu, 
+  //     Cantarell, 
+  //     "Helvetica Neue", 
+  //     sans-serif;
+  //     background-image: url('../images/valentinesday.png');
+  // }
+  
+//   .container {
+//     margin: 0 auto;
+//   } */
 @import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:900);
 @import url(https://fonts.googleapis.com/css?family=Righteous);
@@ -13,26 +147,92 @@
   background-blend-mode: soft-light;
   background-attachment: fixed;
   background-position: center;
+  position: relative;
+  /* background-color: u */
   color: whitesmoke;
-  text-align: center; 
-}
+  text-align: center; }
 
 #demo {
   font-size: 90px;
-  margin-top: 55px;
-  margin-right: 50px;
-}
+  padding-top: 20px; }
 
-.plate {
-  width: 410px;
-  margin-top: 125px;
-  margin-left: 450px;
-}
+canvas {
+  position: absolute;
+  left: 0;
+  top: 350;
+  width: 100%;
+  height: 10%;
+  background-color: rgba(0, 0, 0, 0.2); }
 
 .title {
   font-family: 'Mirza', cursive;
   font-size: 60px;
   color: red; }
+
+* {
+  box-sizing: border-box;
+  position: relative; }
+
+html {
+  font-size: 100%; }
+
+body {
+  background: #eee;
+  font-size: 10px; }
+
+.heart {
+  animation: 1s pulse infinite;
+  margin: auto;
+  position: relative;
+  width: 40vmax;
+  size: 50%; }
+
+.heart:before,
+.heart:after {
+  background: #ee565a;
+  border-radius: 20vmax 20vmax 4vmax 4vmax;
+  content: "";
+  left: 20vmax;
+  height: 32vmax;
+  position: absolute;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  width: 20vmax; }
+
+.heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%; }
+
+.face {
+  background: #222;
+  border-radius: 0 0 10vmax 10vmax;
+  border-top: 2vmax solid #fff;
+  display: block;
+  height: 6vmax;
+  left: 14vmax;
+  position: absolute;
+  top: 16vmax;
+  width: 12vmax;
+  z-index: 5; }
+
+.face:before, .face:after {
+  background: #222;
+  border-radius: 4vmax;
+  box-shadow: 0 4vmax 0 -0.9vmax #e04e50;
+  content: '';
+  display: block;
+  height: 4vmax;
+  position: absolute;
+  bottom: 8vmax;
+  width: 4vmax;
+  z-index: 5; }
+
+.face:before {
+  left: -4vmax; }
+
+.face:after {
+  right: -4vmax; }
 
 h1 {
   background: #fff;
@@ -55,9 +255,245 @@ h1:after {
   position: absolute;
   transform: rotate(45deg); }
 
+@keyframes pulse {
+  80% {
+    transform: scale(0.9); } }
+body {
+  background: #000;
+  color: #fff;
+  position: relative; }
 
+.chrome {
+  position: relative;
+  background-image: -webkit-linear-gradient(#378DBC 0%, #B6E8F1 46%, #ffffff 50%, #32120E 54%, #FFC488 58%, #582C11 90%, #EC9B4E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 4px #f5f5f5;
+  font-size: 200px;
+  font-family: 'Titillium Web', sans-serif;
+  font-style: italic;
+  margin: 0;
+  line-height: 1; }
+
+.chrome:before {
+  content: 'CHROME';
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background-image: -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
+  background-position: -680px 0;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0;
+  padding-right: 300px;
+  -webkit-animation-name: chrome_effect;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite; }
+
+.dreams {
+  position: absolute;
+  margin: 0px;
+  font-family: 'Mr Dafoe', cursive;
+  font-size: 160px;
+  color: #F975F7;
+  transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-15deg);
+  /* Safari and Chrome */
+  margin-left: 400px;
+  margin-top: -120px;
+  -webkit-text-stroke: 1px #f008b7;
+  -webkit-filter: drop-shadow(2px 2px 20px #f008b7);
+  z-index: 20; }
+
+.windows .dreams {
+  -webkit-text-stroke: 4px #f008b7; }
+
+.vectro {
+  position: relative;
+  -webkit-text-stroke: 0.1px #f1f1f1;
+  font-family: 'Righteous', cursive;
+  font-size: 50px;
+  margin: 150px 0 50px 0;
+  color: red;
+  -webkit-text-fill-color: #F10C20;
+  -webkit-filter: drop-shadow(2px 2px 15px #F10C20);
+  font-style: italic;
+  padding-right: 20px; }
+
+.windows .vectro {
+  -webkit-text-stroke: 4px #f1f1f1; }
+
+.vectro-body {
+  -webkit-background-clip: text;
+  background-image: -webkit-linear-gradient(#C3BFB4 0%, #FDFCFA 50%, #E8E7E5 51%, #757172 52%, #E8E9DB 100%);
+  -webkit-filter: drop-shadow(2px 2px 15px #3F59F4); }
+
+.vectro-red {
+  color: #F10C20;
+  -webkit-text-fill-color: #F10C20;
+  -webkit-text-stroke: 0;
+  -webkit-filter: drop-shadow(2px 2px 15px #F10C20);
+  font-style: italic;
+  padding-right: 20px; }
+
+.windows .vectro-red {
+  padding-right: 30px; }
+
+.vectro-green {
+  color: #6BFF2B;
+  -webkit-text-fill-color: #6BFF2B;
+  -webkit-filter: drop-shadow(2px 2px 15px #6BFF2B);
+  -webkit-text-stroke: 0;
+  font-style: italic;
+  padding-right: 20px;
+  margin-left: -20px; }
+
+.windows .vectro-green {
+  padding-right: 30px;
+  margin-left: -30px; }
+
+.vectro-blue {
+  color: #3F59F4;
+  -webkit-text-fill-color: #3F59F4;
+  -webkit-filter: drop-shadow(2px 2px 15px #3F59F4);
+  -webkit-text-stroke: 0;
+  font-style: italic;
+  padding-right: 20px;
+  margin-left: -20px; }
+
+.windows .vectro-blue {
+  padding-right: 30px;
+  margin-left: -30px; }
+
+.street-machine {
+  position: relative; }
+
+.street {
+  position: relative;
+  font-family: 'Candal', sans-serif;
+  font-size: 180px;
+  font-style: italic;
+  -webkit-text-stroke: 0.1px #ed2121;
+  color: #fff;
+  text-shadow: -10px 10px 0px #ed2121;
+  margin: 0; }
+
+.windows .street {
+  -webkit-text-stroke: 4px #ed2121; }
+
+.street:before {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 665px;
+  top: 83px;
+  left: 48px;
+  background: #ed2121;
+  box-shadow: -8px 13px #ed2121; }
+
+.windows .street:before {
+  left: 55px;
+  width: 659px; }
+
+.street:after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 639px;
+  top: 109px;
+  left: 36px;
+  background: #ed2121;
+  box-shadow: -4px 13px #ed2121; }
+
+.machine {
+  position: absolute;
+  left: 50px;
+  top: 350px;
+  font-family: 'Mr Dafoe', cursive;
+  font-size: 130px;
+  transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-15deg);
+  /* Safari and Chrome */
+  color: #ed2121;
+  margin: 0;
+  margin-top: -160px;
+  padding-left: 430px;
+  text-shadow: 1px 2px 0px #F9D2D2; }
+
+.windows .machine {
+  margin-top: -200px; }
+
+.victory {
+  position: relative;
+  font-family: 'Permanent Marker', cursive;
+  font-variant: small-caps;
+  font-size: 180px;
+  -webkit-transform: skew(-15deg, -15deg);
+  padding-left: 80px;
+  background-image: -webkit-linear-gradient(#FF0FF8 0%, #F9F9F7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  -webkit-filter: drop-shadow(2px 2px 20px #f008b7); }
+
+.victory:before {
+  content: '-';
+  position: absolute;
+  bottom: -98px;
+  left: 254px;
+  background-image: -webkit-linear-gradient(#F3C8F3 0%, #F3C8F3 100%);
+  -webkit-background-clip: text;
+  text-shadow: 70px -7px #F3C8F3; }
+
+.victory:after {
+  content: '-';
+  position: absolute;
+  bottom: -85px;
+  left: 395px;
+  background-image: -webkit-linear-gradient(#F3C8F3 0%, #F3C8F3 100%);
+  -webkit-background-clip: text;
+  text-shadow: 70px -5px #F3C8F3; }
+
+.victory-v {
+  position: relative;
+  background-image: -webkit-linear-gradient(#FF0FF8 0%, #F9F9F7 100%);
+  -webkit-background-clip: text;
+  padding-right: 18px;
+  margin-right: -18px; }
+
+.victory-v:before {
+  content: '-';
+  position: absolute;
+  top: -71px;
+  left: -71px;
+  background-image: -webkit-linear-gradient(#FF0FF8 0%, #FC96FC 100%);
+  -webkit-background-clip: text; }
+
+.victory-v:after {
+  content: '-';
+  position: absolute;
+  top: -72px;
+  left: 103px;
+  background-image: -webkit-linear-gradient(#FF0FF8 0%, #FC96FC 100%);
+  -webkit-background-clip: text; }
+
+.future-cop {
+  position: relative;
+  margin-top: 500px; }
+
+/* Ibrahim Jabbari -- www.ibrahimjabbari.com */
 body {
   background-color: #222; }
+
+.plate {
+  width: 410px;
+  margin: 10% auto; }
 
 .shadow {
   color: #fff;
@@ -104,160 +540,4 @@ body {
 .text3 {
   font-size: 100px; }
 
-.card {
-    border-radius: 5px;
-    width: 50%;
-    margin-left: 50px;
-    float: none;
-    margin-top: 100px;
-}
-
-.searchCard {
-right: 0;
-color: #fff;
-position: fixed;
-overflow: hidden;
-top: 250px;
-font-size: 25px;
-}
-
-#email {
-    height: 30px;
-}
-
-#send-btn {
-    height: 38px;
-    width: 85px;
-    background-color: #999;
-}
-
 /*# sourceMappingURL=valentines.css.map */
-
-/* NAV BAR CSS */
-
-@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
-
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
-.fa-2x {
-font-size: 2em;
-}
-.fa {
-position: relative;
-display: table-cell;
-width: 60px;
-height: 36px;
-text-align: center;
-vertical-align: middle;
-font-size:20px;
-}
-
-.main-menu:hover,nav.main-menu.expanded {
-width:250px;
-overflow:visible;
-}
-
-.main-menu {
-background:#212121;
-border-right:1px solid #e5e5e5;
-position:absolute;
-top:0;
-bottom:0;
-height:100%;
-left:0;
-width:60px;
-overflow:hidden;
--webkit-transition:width .05s linear;
-transition:width .05s linear;
-z-index:1000;
-}
-
-.main-menu>ul {
-margin:7px 0;
-}
-
-.main-menu li {
-position:relative;
-display:block;
-width:250px;
-}
-
-.main-menu li>a {
-position:relative;
-display:table;
-border-collapse:collapse;
-border-spacing:0;
-color:#999;
- font-family: arial;
-font-size: 14px;
-text-decoration:none;
--webkit-transition:all .1s linear;
-transition:all .1s linear;
-  
-}
-
-.main-menu .nav-icon {
-position:relative;
-display:table-cell;
-width:60px;
-height:36px;
-text-align:center;
-vertical-align:middle;
-font-size:18px;
-}
-
-.main-menu .nav-text {
-position:relative;
-display:table-cell;
-vertical-align:middle;
-width:190px;
-  font-family: 'Titillium Web', sans-serif;
-}
-
-.main-menu>ul.logout {
-position:absolute;
-left:0;
-bottom:0;
-}
-
-.no-touch .scrollable.hover {
-overflow-y:hidden;
-}
-
-.no-touch .scrollable.hover:hover {
-overflow-y:auto;
-overflow:visible;
-}
-
-a:hover,a:focus {
-text-decoration:none;
-}
-
-nav {
--webkit-user-select:none;
--moz-user-select:none;
--ms-user-select:none;
--o-user-select:none;
-user-select:none;
-}
-
-nav ul,nav li {
-outline:0;
-margin:0;
-padding:0;
-}
-.main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
-color:#fff;
-background-color:#5fa2db;
-}
-.area {
-float: left;
-background: #e2e2e2;
-width: 100%;
-height: 100%;
-}
-@font-face {
-  font-family: 'Titillium Web';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
-}
