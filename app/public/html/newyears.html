@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://peter.build/newyears/js/flipclock.js"></script>
+    <script src="http://peter.build/newyears/js/newyear.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/newyears.css">
+    <title>New Years Day</title>
+</head>
+
+<body id="newYearsBody">
+<!-- NAV BAR START -->
+<div class="area"></div>
+<nav class="main-menu">
+    <ul>
+        <li>
+            <a href="home.html">
+                <i class="fa fa-home fa-2x"></i>
+                <span class="nav-text">
+                    Home
+                </span>
+            </a>
+
+        </li>
+        <li class="has-subnav">
+                <a href="halloween.html">
+                    <i class="fa fa-laptop fa-2x"></i>
+                    <span class="nav-text">
+                        Halloween
+                    </span>
+                </a>
+
+        </li>
+        <li class="has-subnav">
+            <a href="thanksgiving.html">
+                <i class="fa fa-laptop fa-2x"></i>
+                <span class="nav-text">
+                    Thanksgiving
+                </span>
+            </a>
+
+        </li>
+        <li class="has-subnav">
+            <a href="christmas.html">
+                <i class="fa fa-list fa-2x"></i>
+                <span class="nav-text">
+                    Christmas
+                </span>
+            </a>
+
+        </li>
+        <li class="has-subnav">
+            <a href="newyears.html">
+                <i class="fa fa-folder-open fa-2x"></i>
+                <span class="nav-text">
+                    New Years
+                </span>
+            </a>
+
+        </li>
+        <li>
+            <a href="valentines.html">
+                <i class="fa fa-bar-chart-o fa-2x"></i>
+                <span class="nav-text">
+                    Valentines
+                </span>
+            </a>
+        </li>
+    </ul>
+</nav>
+<!-- NAV BAR END -->
+
+    <canvas id="canvas"></canvas>
+    <form action="https://formspree.io/xwkekelj" method="POST" enctype="multipart/form-data">
+        <div class="searchCard" class="card text-center" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Sign Up!</h5>
+                <p class="card-text">Get notified when this page unlocks.</p>
+                <input class="display" class="form-control" id="email" type="text" placeholder="johnsmith@gmail.com" />
+                <button class="btn btn-info" type="submit" id="send-btn">Send</button>
+            </div>
+        </div>
+    </form>
+    <div class="holiday-body">
+
+        <div class="col-md-6">
+            <h1 class="title">New Years Day!</h1>
+        </div>
+        <!-- <div class="row">
+            <h3 class="sub"> Let's see how many days are left until:</h3>
+        </div> -->
+    </div>
+    
+    <p id="demo"></p>
+    <script>
+        var deadline = new Date("Dec 31, 2019 23:59:59").getTime();
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var t = deadline - now;
+            var days = Math.floor(t / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((t % (1000 * 60)) / 1000);
+            document.getElementById("demo").innerHTML = days + "D "  
+                + hours + "H " + minutes + "M " + seconds + "S ";
+            if (t < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "HAPPY NEW YEARS!";
+            }
+        }, 1000); 
+    </script>
+    <h2 class="titleOne">Until</h2>
+    </div>
+
+    <script type="text/javascript" src="../assets/js/newyears.js"></script>
+</body>
+
+</html>

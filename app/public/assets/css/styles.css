@@ -5,40 +5,314 @@ body {
     font-size: 18px;
     line-height: 34px;
     background-image: url('../images/home_background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     
 }
 
 #homeLogo {
     font-family: 'Fredericka the Great', cursive;
-    text-align: center;
+    position: absolute;
     font-size: 75px;
     margin-top: 25px;
-}
-
-#rowOne {
-    margin-top: 75px;
-    margin-left: 295px;
-}
-
-#rowTwo {
-    margin-top: 70px;
-    margin-left: 105px;
+    left: 875px;
+    margin-right: 45px;
 }
 
 #underline {
     width: 30%;
-    margin-left: 450px;
-    top: 0;
+    margin-right: 45px;
+    top: 100px;
+    float: right;
+    position: relative;
 }
 
-    /* CHRISTMAS PAGE CSS */
+#buttons {
+   margin-top: 20px;
+   float: left;
+   margin-left: 230px;
+   width: 70%;
+   font-size: 15px;
+   font-weight: 20px;
+}
 
-    #xmasBody {
-        background-image: url('../images/christmasBackground.jpg');
-        /* background-repeat: no-repeat; */
-        background-attachment: fixed;
-        background-position: center;
-        height: auto;
-    }
+#slogan {
+    text-align: center;
+    margin-top: 220px;
+    float: left;
+    margin-left: 160px;
+    font-weight: 900;
+}
+
+#lineOne {
+    font-size: 45px
+}
+
+/* NAV BAR CSS */
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+.fa-2x {
+font-size: 2em;
+}
+.fa {
+position: relative;
+display: table-cell;
+width: 60px;
+height: 36px;
+text-align: center;
+vertical-align: middle;
+font-size:20px;
+}
+
+.main-menu:hover,nav.main-menu.expanded {
+width:250px;
+overflow:visible;
+}
+
+.main-menu {
+background:#212121;
+border-right:1px solid #e5e5e5;
+position:absolute;
+top:0;
+bottom:0;
+height:100%;
+left:0;
+width:60px;
+overflow:hidden;
+-webkit-transition:width .05s linear;
+transition:width .05s linear;
+z-index:1000;
+}
+
+.main-menu>ul {
+margin:7px 0;
+}
+
+.main-menu li {
+position:relative;
+display:block;
+width:250px;
+}
+
+.main-menu li>a {
+position:relative;
+display:table;
+border-collapse:collapse;
+border-spacing:0;
+color:#999;
+ font-family: arial;
+font-size: 14px;
+text-decoration:none;
+-webkit-transition:all .1s linear;
+transition:all .1s linear;
+  
+}
+
+.main-menu .nav-icon {
+position:relative;
+display:table-cell;
+width:60px;
+height:36px;
+text-align:center;
+vertical-align:middle;
+font-size:18px;
+}
+
+.main-menu .nav-text {
+position:relative;
+display:table-cell;
+vertical-align:middle;
+width:190px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.main-menu>ul.logout {
+position:absolute;
+left:0;
+bottom:0;
+}
+
+.no-touch .scrollable.hover {
+overflow-y:hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+overflow-y:auto;
+overflow:visible;
+}
+
+a:hover,a:focus {
+text-decoration:none;
+}
+
+nav {
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-o-user-select:none;
+user-select:none;
+}
+
+nav ul,nav li {
+outline:0;
+margin:0;
+padding:0;
+}
+.main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
+color:#fff;
+background-color:#5fa2db;
+}
+.area {
+float: left;
+background: #e2e2e2;
+width: 100%;
+height: 100%;
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+}
+
+/* CHRISTMAS PAGE CSS */
+
+#xmasBody {
+    background-image: url('../images/christmasBackground.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+     background-position: center;
+     background-size: cover;
+    height: auto;
+}
+
+#demo {
+    position: relative;
+    font-size: 75px;
+    margin-left: 475px;
+    top: 200px; 
+    z-index: 5px;
+    color: black;
+    font-family: 'Mountains of Christmas', cursive;
+}
+
+.daysTill {
+    position: relative;
+    font-family: 'Helvetica';
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: black;
+    text-align: center;
+    font-size: 40px;
+    z-index: 5px;
+    top: 250px;
+    font-family: 'Mountains of Christmas', cursive;
+  }
+
+.card {
+    border-radius: 5px;
+    width: 50%;
+    margin-left: 50px;
+    float: none;
+    margin-top: 100px;
+}
+.xbtn {
+  background-color: #999;
+}
+
+#email {
+  height: 30px;
+  width: 155px;
+  font-size: 15px;
+}
+
+#send-btn {
+  height: 35px;
+  width: 50px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.card-title {
+  font-weight: 900;
+}
+
+.searchCard {
+right: 0;
+color: black;
+position: fixed;
+overflow: hidden;
+top: 50px;
+font-size: 25px;
+}
+
+  /* HALLOWEEN PAGE STYLES */
+
+  #halloweenBody {
+    background-image: url('../images/halloweenBackground.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+     background-position: center;
+     background-size: cover;
+    height: auto;
+}
+
+iframe {
+  float: right;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.chirp {
+  padding: 10px;
+  margin: 10px;
+  background-color: #e8f9ff;
+}
+      
+.cool-font {
+  font-family: Shrikhand, cursive;
+  font-size: 24px;
+  color: black;
+}
+      
+.jumbotron {
+  font-family: Shrikhand, cursive;
+  color: black;
+  background-color: #1da1f2;
+}
+            
+#chirp-submit {
+  margin: 10px;
+  font-family: Shrikhand, cursive;
+  color: #1da1f2;
+  background-color: white;
+  border-color: #1da1f2;
+  border-style: solid;
+  border-width: 2px;
+}
+      
+p {
+  margin: 0;
+  font-size: 16px;
+}
+
+#table {
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+#rowOne {
+  margin-top: 20px;
+}
+      
+
+
+ 
+
+    
 
 
