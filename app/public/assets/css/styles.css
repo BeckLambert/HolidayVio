@@ -193,9 +193,11 @@ height: 100%;
 #demo {
     position: relative;
     font-size: 75px;
-    margin-left: 350px;
+    margin-left: 475px;
     top: 200px; 
     z-index: 5px;
+    color: black;
+    font-family: 'Mountains of Christmas', cursive;
 }
 
 .daysTill {
@@ -207,8 +209,46 @@ height: 100%;
     text-align: center;
     font-size: 40px;
     z-index: 5px;
-    top: 210px;
+    top: 250px;
+    font-family: 'Mountains of Christmas', cursive;
   }
+
+.card {
+    border-radius: 5px;
+    width: 50%;
+    margin-left: 50px;
+    float: none;
+    margin-top: 100px;
+}
+.xbtn {
+  background-color: #999;
+}
+
+#email {
+  height: 30px;
+  width: 155px;
+  font-size: 15px;
+}
+
+#send-btn {
+  height: 35px;
+  width: 50px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.card-title {
+  font-weight: 900;
+}
+
+.searchCard {
+right: 0;
+color: black;
+position: fixed;
+overflow: hidden;
+top: 50px;
+font-size: 25px;
+}
 
   /* HALLOWEEN PAGE STYLES */
 
@@ -221,7 +261,7 @@ height: 100%;
     height: auto;
 }
 
-iframe {
+/* iframe {
     float: right;
     margin-top: 315px;
 
@@ -263,7 +303,7 @@ iframe {
         font-size: 16px;
       }
       
-}
+} */
 
  
 
